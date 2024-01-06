@@ -2,7 +2,9 @@
 Automatically post your bot stats and receive vote events from the site.
 
 > To receive vote events, you must set your webhook url in the settings of your bot/server on top.gg to the ip/domain of your bot host + the port it's listening to, which by default is `3000` and `/dblwebhook` at the end.
+
 > An example would be `http://api.lynnux.xyz/dblwebhook`
+
 > Another example would be `http://192.168.10.1:3000/dblwebhook`
 
 ## Example (JavaScript)
