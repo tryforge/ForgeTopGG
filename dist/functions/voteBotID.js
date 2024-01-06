@@ -4,7 +4,7 @@ const forgescript_1 = require("forgescript");
 exports.default = new forgescript_1.NativeFunction({
     name: "$voteBotID",
     version: "1.0.0",
-    description: "Returns the bot id that was voted",
+    description: "Returns the bot that was voted",
     unwrap: false,
     output: forgescript_1.ArgType.User,
     execute(ctx) {

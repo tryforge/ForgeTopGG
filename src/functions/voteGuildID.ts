@@ -4,7 +4,7 @@ import { ArgType, NativeFunction } from "forgescript";
 export default new NativeFunction({
     name: "$voteGuildID",
     version: "1.0.0",
-    description: "Returns the guild id that was voted",
+    description: "Returns the guild that was voted",
     unwrap: false,
     output: ArgType.Guild,
     execute(ctx) {
