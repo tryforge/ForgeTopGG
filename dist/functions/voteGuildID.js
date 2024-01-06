@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const forgescript_1 = require("forgescript");
+exports.default = new forgescript_1.NativeFunction({
+    name: "$voteGuildID",
+    version: "1.0.0",
+    description: "Returns the guild id that was voted",
+    unwrap: false,
+    output: forgescript_1.ArgType.Guild,
+    execute(ctx) {
+        return this.success(ctx.runtime.extras?.guild);
+    },
+});
+//# sourceMappingURL=voteGuildID.js.map
