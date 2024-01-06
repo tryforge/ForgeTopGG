@@ -60,13 +60,10 @@ top.commands.add({
     code: `$log[Error $postStatsError]`
 });
 top.commands.add({
-    type: "posted",
-    code: `$log[posted!]`
-});
-top.commands.add({
     type: "voted",
     code: `$log[voted by $voteUserID]`
 });
+client.commands.load(__dirname + "/commands");
 // eslint-disable-next-line no-undef
 client.login(process.env.TOKEN);
 //# sourceMappingURL=client.js.map

@@ -8,7 +8,7 @@ export default new TopGGEventHandler({
     description: "This event is called when your bot's stats are posted to top.gg",
     listener(posted) {
         const commands = this.getExtension(ForgeTopGG, true).commands.get("posted")
-
+        
         for (const command of commands) {
             Interpreter.run({
                 obj: {},
