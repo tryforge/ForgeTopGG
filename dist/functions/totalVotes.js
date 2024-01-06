@@ -7,10 +7,9 @@ exports.default = new forgescript_1.NativeFunction({
     name: "$totalVotes",
     version: "1.0.0",
     description: "Gets total votes of the bot",
-    brackets: true,
-    unwrap: true,
+    unwrap: false,
     output: forgescript_1.ArgType.Boolean,
-    async execute(ctx, args) {
+    async execute(ctx) {
         const req = await (0, undici_1.fetch)(`https://top.gg/api/bots/${ctx.client.user.id}`, {
             headers: {
                 authorization: ctx.getExtension(__1.ForgeTopGG, true)["options"].token

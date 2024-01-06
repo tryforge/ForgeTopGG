@@ -6,10 +6,9 @@ export default new NativeFunction({
     name: "$monthlyVotes",
     version: "1.0.0",
     description: "Gets total votes of the bot this month",
-    brackets: true,
-    unwrap: true,
+    unwrap: false,
     output: ArgType.Boolean, 
-    async execute(ctx, args) {
+    async execute(ctx) {
         const req: { 
             points: number
             monthlyPoints: number
