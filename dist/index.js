@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ForgeTopGG = void 0;
-const forgescript_1 = require("forgescript");
+const forgescript_1 = require("@tryforge/forgescript");
 const constants_1 = require("./constants");
 const sdk_1 = require("@top-gg/sdk");
 const topgg_autoposter_1 = require("topgg-autoposter");

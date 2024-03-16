@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const forgescript_1 = require("forgescript");
+const forgescript_1 = require("@tryforge/forgescript");
 const __1 = require("..");
 const TopGGEventHandlers_1 = require("../structures/TopGGEventHandlers");
 exports.default = new TopGGEventHandlers_1.TopGGEventHandler({

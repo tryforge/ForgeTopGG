@@ -1,4 +1,4 @@
-import { BaseCommandManager } from "forgescript";
+import { BaseCommandManager } from "@tryforge/forgescript";
 import { ITopGGEvents } from "./TopGGEventHandlers";
 import { TopGGEventManagerName } from "../constants";
 

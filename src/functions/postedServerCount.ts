@@ -1,5 +1,5 @@
 import { BotStats } from "@top-gg/sdk";
-import { ArgType, NativeFunction } from "forgescript";
+import { ArgType, NativeFunction } from "@tryforge/forgescript";
 
 export default new NativeFunction({
     name: "$postedServerCount",

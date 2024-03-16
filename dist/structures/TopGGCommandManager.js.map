@@ -1,1 +1,1 @@
-{"version":3,"file":"TopGGCommandManager.js","sourceRoot":"","sources":["../../src/structures/TopGGCommandManager.ts"],"names":[],"mappings":";;;AAAA,6CAAiD;AAEjD,4CAAqD;AAErD,MAAa,mBAAoB,SAAQ,gCAAsC;IAC3E,WAAW,GAAG,iCAAqB,CAAA;CACtC;AAFD,kDAEC"}
+{"version":3,"file":"TopGGCommandManager.js","sourceRoot":"","sources":["../../src/structures/TopGGCommandManager.ts"],"names":[],"mappings":";;;AAAA,uDAA2D;AAE3D,4CAAqD;AAErD,MAAa,mBAAoB,SAAQ,gCAAsC;IAC3E,WAAW,GAAG,iCAAqB,CAAA;CACtC;AAFD,kDAEC"}

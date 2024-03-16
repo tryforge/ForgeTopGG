@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const forgescript_1 = require("forgescript");
+const forgescript_1 = require("@tryforge/forgescript");
 const dotenv_1 = require("dotenv");
 const __1 = require("..");
 (0, dotenv_1.config)();
@@ -38,10 +38,6 @@ const client = new forgescript_1.ForgeClient({
         "messageReactionAdd",
         "guildMemberAdd",
         "interactionCreate",
-    ],
-    disableFunctions: [
-        "$guildName",
-        "$cope"
     ],
     mobile: true,
     useInviteSystem: true,
