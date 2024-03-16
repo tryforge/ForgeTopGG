@@ -1,6 +1,6 @@
-import { EventManager, ForgeClient, ForgeExtension, FunctionManager } from "forgescript";
+import { EventManager, ForgeClient, ForgeExtension } from "@tryforge/forgescript";
 import { TopGGEventManagerName } from "./constants";
-import { BotStats, Webhook, WebhookPayload } from "@top-gg/sdk";
+import { Webhook } from "@top-gg/sdk";
 import { AutoPoster as autoPoster } from "topgg-autoposter"
 import { PosterOptions } from "topgg-autoposter/dist/typings";
 import express from "express"

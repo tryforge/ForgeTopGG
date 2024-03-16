@@ -1,4 +1,4 @@
-import { generateMetadata } from "forgescript"
+import { generateMetadata } from "@tryforge/forgescript"
 import { TopGGEventManagerName } from "./constants"
 
 generateMetadata(

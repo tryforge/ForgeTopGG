@@ -1,1 +1,1 @@
-{"version":3,"file":"voteIsWeekend.d.ts","sourceRoot":"","sources":["../../src/functions/voteIsWeekend.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAE,cAAc,EAAE,MAAM,aAAa,CAAC;;AAEtD,wBASE"}
+{"version":3,"file":"voteIsWeekend.d.ts","sourceRoot":"","sources":["../../src/functions/voteIsWeekend.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAE,cAAc,EAAE,MAAM,uBAAuB,CAAC;;AAEhE,wBASE"}

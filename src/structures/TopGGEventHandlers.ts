@@ -1,5 +1,5 @@
 import { BotStats, WebhookPayload } from "@top-gg/sdk";
-import { BaseEventHandler, EventManager, ForgeClient } from "forgescript";
+import { BaseEventHandler, ForgeClient } from "@tryforge/forgescript";
 import { ForgeTopGG } from "..";
 
 export interface ITopGGEvents {
