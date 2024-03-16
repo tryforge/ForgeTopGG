@@ -1,4 +1,4 @@
-import { Interpreter } from "forgescript";
+import { Interpreter } from "@tryforge/forgescript";
 import { ForgeTopGG } from "..";
 import { TopGGEventHandler } from "../structures/TopGGEventHandlers";
 

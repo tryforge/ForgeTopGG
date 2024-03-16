@@ -1,4 +1,4 @@
-import { ArgType, NativeFunction } from "forgescript";
+import { ArgType, NativeFunction } from "@tryforge/forgescript"
 import { fetch } from "undici"
 import { ForgeTopGG } from "..";
 

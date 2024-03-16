@@ -1,4 +1,4 @@
-import { ForgeClient, ForgeExtension } from "forgescript";
+import { ForgeClient, ForgeExtension } from "@tryforge/forgescript";
 import { PosterOptions } from "topgg-autoposter/dist/typings";
 import { TopGGCommandManager } from "./structures/TopGGCommandManager";
 import { ITopGGEvents } from "./structures/TopGGEventHandlers";

@@ -1,4 +1,4 @@
-import { ForgeClient, LogPriority } from "forgescript"
+import { ForgeClient, LogPriority } from "@tryforge/forgescript"
 import { config } from "dotenv"
 import { ActivityType, Events } from "discord.js"
 import { ForgeTopGG } from ".."
@@ -39,10 +39,6 @@ const client = new ForgeClient({
         "messageReactionAdd",
         "guildMemberAdd",
         "interactionCreate",
-    ],
-    disableFunctions: [
-        "$guildName",
-        "$cope"
     ],
     mobile: true,
     useInviteSystem: true,
