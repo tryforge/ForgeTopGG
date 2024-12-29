@@ -18,7 +18,6 @@ export declare class ForgeTopGG extends ForgeExtension {
     description: string;
     version: string;
     private readonly webhook;
-    private readonly app;
     private client;
     private emitter;
     commands: TopGGCommandManager;

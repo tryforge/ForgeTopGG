@@ -11,13 +11,13 @@ const topgg_autoposter_1 = require("topgg-autoposter");
 const express_1 = __importDefault(require("express"));
 const TopGGCommandManager_1 = require("./structures/TopGGCommandManager");
 const tiny_typed_emitter_1 = require("tiny-typed-emitter");
+const webserver_1 = require("@tryforge/webserver");
 class ForgeTopGG extends forgescript_1.ForgeExtension {
     options;
     name = "ForgeTopGG";
     description = "A extension that populates your bot stats to top.gg and lets you receive votes from it";
     version = "1.0.0";
     webhook;
-    app = (0, express_1.default)();
     client;
     emitter = new tiny_typed_emitter_1.TypedEmitter();
     commands;
@@ -25,8 +25,9 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
         super();
         this.options = options;
         this.webhook = new sdk_1.Webhook(options.auth);
-        this.app.use(express_1.default.json());
-        this.app.post("/dblwebhook", this.webhook.listener(vote => void this.emitter.emit("voted", vote)));
+        const server = (0, webserver_1.app)(options.port ?? 3000);
+        server.use(express_1.default.json());
+        server.post("/dblwebhook", this.webhook.listener(vote => void this.emitter.emit("voted", vote)));
     }
     init(client) {
         this.client = client;
@@ -40,7 +41,6 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
         this.load(__dirname + `/functions`);
         if (this.options.events?.length)
             this.client.events.load(constants_1.TopGGEventManagerName, this.options.events);
-        this.app.listen(this.options.port ?? 3000);
     }
 }
 exports.ForgeTopGG = ForgeTopGG;
