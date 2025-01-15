@@ -24,7 +24,7 @@ export type TransformEvents<T> = {
 export class ForgeTopGG extends ForgeExtension {
     name = "forge.topgg"
     description = "A extension that populates your bot stats to top.gg and lets you receive votes from it"
-    version = "1.0.0"
+    version = require("../package.json").version
 
     private readonly webhook: Webhook
 

@@ -13,7 +13,7 @@ const top = new __1.ForgeTopGG({
         "voted"
     ],
     post: {
-        interval: 3_600_000 // Every hour
+        interval: 3600000 // Every hour
     }
 });
 const client = new forgescript_1.ForgeClient({

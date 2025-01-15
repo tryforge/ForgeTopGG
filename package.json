@@ -1,6 +1,6 @@
 {
   "name": "@tryforge/forge.topgg",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,9 +22,9 @@
   "license": "ISC",
   "dependencies": {
     "@top-gg/sdk": "^3.1.6",
-    "@tryforge/webserver": "^1.0.1",
+    "@tryforge/webserver": "^1.0.2",
     "tiny-typed-emitter": "^2.1.0",
-    "topgg-autoposter": "^2.0.1"
+    "topgg-autoposter": "^2.0.2"
   },
   "devDependencies": {
     "@tryforge/forgescript": "^1.4.0",

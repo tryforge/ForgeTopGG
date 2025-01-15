@@ -16,7 +16,7 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
     options;
     name = "forge.topgg";
     description = "A extension that populates your bot stats to top.gg and lets you receive votes from it";
-    version = "1.0.0";
+    version = require("../package.json").version;
     webhook;
     client;
     emitter = new tiny_typed_emitter_1.TypedEmitter();

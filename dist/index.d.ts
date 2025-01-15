@@ -16,7 +16,7 @@ export declare class ForgeTopGG extends ForgeExtension {
     private readonly options;
     name: string;
     description: string;
-    version: string;
+    version: any;
     private readonly webhook;
     private client;
     private emitter;

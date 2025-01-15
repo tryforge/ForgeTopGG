@@ -1,8 +1,3 @@
-*/__tests__/
-\.env
-docs
-./metadata
-act.exe
-\.github
-PUBLISHING.md
-# src
+*/**/__tests__
+src
+metadata
