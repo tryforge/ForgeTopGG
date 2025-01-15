@@ -22,7 +22,7 @@ export type TransformEvents<T> = {
 }
 
 export class ForgeTopGG extends ForgeExtension {
-    name = "ForgeTopGG"
+    name = "forge.topgg"
     description = "A extension that populates your bot stats to top.gg and lets you receive votes from it"
     version = "1.0.0"
 

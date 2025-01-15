@@ -14,7 +14,7 @@ const tiny_typed_emitter_1 = require("tiny-typed-emitter");
 const webserver_1 = require("@tryforge/webserver");
 class ForgeTopGG extends forgescript_1.ForgeExtension {
     options;
-    name = "ForgeTopGG";
+    name = "forge.topgg";
     description = "A extension that populates your bot stats to top.gg and lets you receive votes from it";
     version = "1.0.0";
     webhook;
