@@ -19,7 +19,7 @@
     "webhook"
   ],
   "author": "ruben40000",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "@top-gg/sdk": "^3.1.6",
     "@tryforge/webserver": "^1.0.2",
