@@ -6,7 +6,7 @@ export default new NativeFunction({
     version: "1.0.0",
     description: "Returns the query params used for the guild",
     unwrap: false,
-    output: ArgType.User,
+    output: ArgType.String,
     execute(ctx) {
         return this.success((ctx.runtime.extras as WebhookPayload)?.query)
     },

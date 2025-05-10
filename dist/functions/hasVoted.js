@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const forgescript_1 = require("@tryforge/forgescript");
-const undici_1 = require("undici");
 const __1 = require("..");
+const sdk_1 = require("@top-gg/sdk");
 exports.default = new forgescript_1.NativeFunction({
     name: "$hasVoted",
     version: "1.0.0",
-    description: "Checks whether an user has voted a bot",
+    description: "Checks whether a user has voted a bot",
     brackets: true,
     args: [
         {
@@ -19,13 +19,9 @@ exports.default = new forgescript_1.NativeFunction({
     ],
     unwrap: true,
     output: forgescript_1.ArgType.Boolean,
-    async execute(ctx, args) {
-        const req = await (0, undici_1.fetch)(`https://top.gg/api/bots/${ctx.client.user.id}/check?userId=${args[0].id}`, {
-            headers: {
-                authorization: ctx.getExtension(__1.ForgeTopGG, true)["options"].token
-            }
-        }).then(x => x.json());
-        return this.success(Boolean(req.voted));
+    async execute(ctx, [user]) {
+        const api = new sdk_1.Api(ctx.getExtension(__1.ForgeTopGG, true)["options"].token);
+        return this.success(await api.hasVoted(user.id).catch(ctx.noop));
     },
 });
 //# sourceMappingURL=hasVoted.js.map
