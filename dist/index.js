@@ -15,7 +15,7 @@ const webserver_1 = require("@tryforge/webserver");
 class ForgeTopGG extends forgescript_1.ForgeExtension {
     options;
     name = "forge.topgg";
-    description = "A extension that populates your bot stats to top.gg and lets you receive votes from it";
+    description = "An extension that populates your bot stats to Top.gg and lets you receive votes from it.";
     version = require("../package.json").version;
     webhook;
     client;
@@ -33,9 +33,11 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
         this.client = client;
         this.commands = new TopGGCommandManager_1.TopGGCommandManager(client);
         this.client.once("ready", (client) => {
-            const poster = (0, topgg_autoposter_1.AutoPoster)(this.options.token, client, this.options.post);
-            poster.on("error", (err) => this.emitter.emit("error", err));
-            poster.on("posted", (stats) => this.emitter.emit("posted", stats));
+            if (this.options.post) {
+                const poster = (0, topgg_autoposter_1.AutoPoster)(this.options.token, client, this.options.post);
+                poster.on("error", (err) => this.emitter.emit("error", err));
+                poster.on("posted", (stats) => this.emitter.emit("posted", stats));
+            }
         });
         forgescript_1.EventManager.load(constants_1.TopGGEventManagerName, __dirname + `/events`);
         this.load(__dirname + `/functions`);
