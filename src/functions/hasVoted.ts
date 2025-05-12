@@ -1,11 +1,11 @@
 import { ArgType, NativeFunction } from "@tryforge/forgescript"
-import { fetch } from "undici"
-import { ForgeTopGG } from "..";
+import { ForgeTopGG } from ".."
+import { Api } from "@top-gg/sdk"
 
 export default new NativeFunction({
     name: "$hasVoted",
     version: "1.0.0",
-    description: "Checks whether an user has voted a bot",
+    description: "Checks whether a user has voted a bot",
     brackets: true,
     args: [
         {
@@ -18,12 +18,8 @@ export default new NativeFunction({
     ],
     unwrap: true,
     output: ArgType.Boolean, 
-    async execute(ctx, args) {
-        const req: { voted: 1 | 0 } = await fetch(`https://top.gg/api/bots/${ctx.client.user.id}/check?userId=${args[0].id}`, {
-            headers: {
-                authorization: ctx.getExtension(ForgeTopGG, true)["options"].token
-            }
-        }).then(x => x.json() as any)
-        return this.success(Boolean(req.voted))
+    async execute(ctx, [user]) {
+        const api = new Api(ctx.getExtension(ForgeTopGG, true)["options"].token)
+        return this.success(await api.hasVoted(user.id).catch(ctx.noop))
     },
 })

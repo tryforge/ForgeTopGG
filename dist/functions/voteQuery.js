@@ -6,7 +6,7 @@ exports.default = new forgescript_1.NativeFunction({
     version: "1.0.0",
     description: "Returns the query params used for the guild",
     unwrap: false,
-    output: forgescript_1.ArgType.User,
+    output: forgescript_1.ArgType.String,
     execute(ctx) {
         return this.success(ctx.runtime.extras?.query);
     },

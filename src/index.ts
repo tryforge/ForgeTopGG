@@ -23,7 +23,7 @@ export type TransformEvents<T> = {
 
 export class ForgeTopGG extends ForgeExtension {
     name = "forge.topgg"
-    description = "A extension that populates your bot stats to top.gg and lets you receive votes from it"
+    description = "An extension that populates your bot stats to Top.gg and lets you receive votes from it."
     version = require("../package.json").version
 
     private readonly webhook: Webhook
@@ -48,9 +48,11 @@ export class ForgeTopGG extends ForgeExtension {
         this.commands = new TopGGCommandManager(client)
         
         this.client.once("ready", (client) => {
-            const poster = autoPoster(this.options.token, client, this.options.post)
-            poster.on("error", (err) => this.emitter.emit("error", err))
-            poster.on("posted", (stats) => this.emitter.emit("posted", stats))
+            if (this.options.post) {
+                const poster = autoPoster(this.options.token, client, this.options.post)
+                poster.on("error", (err) => this.emitter.emit("error", err))
+                poster.on("posted", (stats) => this.emitter.emit("posted", stats))
+            }
         })
 
         EventManager.load(TopGGEventManagerName, __dirname + `/events`)
