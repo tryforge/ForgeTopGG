@@ -5,7 +5,7 @@ import { TopGGEventHandler } from "../structures/TopGGEventHandlers";
 export default new TopGGEventHandler({
     name: "posted",
     version: "1.0.0",
-    description: "This event is called when your bot's stats are posted to top.gg",
+    description: "This event is called when your bot's stats are posted to Top.gg",
     listener(posted) {
         const commands = this.getExtension(ForgeTopGG, true).commands.get("posted")
         

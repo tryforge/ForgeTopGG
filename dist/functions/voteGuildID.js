@@ -5,7 +5,6 @@ exports.default = new forgescript_1.NativeFunction({
     name: "$voteGuildID",
     version: "1.0.0",
     description: "Returns the guild that was voted",
-    deprecated: true,
     unwrap: false,
     output: forgescript_1.ArgType.Guild,
     execute(ctx) {
