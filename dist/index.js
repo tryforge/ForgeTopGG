@@ -32,7 +32,7 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
     init(client) {
         this.client = client;
         this.commands = new TopGGCommandManager_1.TopGGCommandManager(client);
-        this.client.once("ready", (client) => {
+        this.client.once("clientReady", (client) => {
             if (this.options.post) {
                 const poster = (0, topgg_autoposter_1.AutoPoster)(this.options.token, client, this.options.post);
                 poster.on("error", (err) => this.emitter.emit("error", err));
@@ -40,7 +40,7 @@ class ForgeTopGG extends forgescript_1.ForgeExtension {
             }
         });
         forgescript_1.EventManager.load(constants_1.TopGGEventManagerName, __dirname + `/events`);
-        this.load(__dirname + `/functions`);
+        this.load(__dirname + `/native`);
         if (this.options.events?.length)
             this.client.events.load(constants_1.TopGGEventManagerName, this.options.events);
     }

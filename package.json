@@ -1,12 +1,13 @@
 {
   "name": "@tryforge/forge.topgg",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "tsc",
     "docgen": "tsc && node dist/docgen",
+    "commit": "npm run docgen && node dist/commit",
     "test": "tsc && node dist/__tests__/runner"
   },
   "keywords": [
@@ -27,7 +28,7 @@
     "topgg-autoposter": "^2.0.2"
   },
   "devDependencies": {
-    "@tryforge/forgescript": "^2.3.0",
+    "@tryforge/forgescript": "^2.5.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.10.6",
     "dotenv": "^16.3.1",

@@ -2,8 +2,8 @@ import { generateMetadata } from "@tryforge/forgescript"
 import { TopGGEventManagerName } from "./constants"
 
 generateMetadata(
-    __dirname + "/functions",
-    "functions",
+    __dirname + "/native",
+    "native",
     TopGGEventManagerName,
     undefined,
     undefined,

@@ -47,7 +47,7 @@ export class ForgeTopGG extends ForgeExtension {
         this.client = client
         this.commands = new TopGGCommandManager(client)
         
-        this.client.once("ready", (client) => {
+        this.client.once("clientReady", (client) => {
             if (this.options.post) {
                 const poster = autoPoster(this.options.token, client, this.options.post)
                 poster.on("error", (err) => this.emitter.emit("error", err))
@@ -56,7 +56,7 @@ export class ForgeTopGG extends ForgeExtension {
         })
 
         EventManager.load(TopGGEventManagerName, __dirname + `/events`)
-        this.load(__dirname + `/functions`)
+        this.load(__dirname + `/native`)
 
         if (this.options.events?.length)
             this.client.events.load(TopGGEventManagerName, this.options.events)
