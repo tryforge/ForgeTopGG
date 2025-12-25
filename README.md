@@ -5,7 +5,7 @@ Automatically post your bot stats and receive vote events from the site.
 
 ## Example (JavaScript)
 ```ts
-const { ForgeTopGG } = require("@tryfroge/forge.topgg");
+const { ForgeTopGG } = require("@tryforge/forge.topgg");
 const { ForgeClient } = require("@tryforge/forgescript");
 
 const top = new ForgeTopGG({
